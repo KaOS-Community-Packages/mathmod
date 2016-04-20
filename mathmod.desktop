@@ -1,0 +1,9 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Name=MathMod
+Comment=A mathematical modeling software
+Exec=/usr/share/mathmod/MathMod
+Icon=mathmod
+Terminal=false
+Type=Application
+Categories=Science;
