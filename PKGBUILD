@@ -1,15 +1,16 @@
 pkgname=mathmod
 pkgver=4.1.80
 _branch=283
-pkgrel=1
+pkgrel=2
 pkgdesc="A mathematical modeling software"
 arch=("x86_64")
 url="https://sourceforge.net/projects/mathmod/"
 license=('LGPL3')
 depends=('qt5-base' 'qt5-tools' 'glu')
-source=("$pkgname-$pkgver::https://sourceforge.net/code-snapshots/svn/m/ma/mathmod/branches/mathmod-branches-${_branch}-trunk.zip" "$pkgname.desktop")
-md5sums=('4b6b2576ae739becd0fc4f187ec1b85c'
+source=("https://sourceforge.net/code-snapshots/svn/m/ma/mathmod/branches/mathmod-branches-${_branch}-trunk.zip" "$pkgname.desktop")
+md5sums=('1de0ad9dbaeccfff2a8498ed2534c229'
          '42efefc32753c8c03ae6c4e93e18d841')
+
 
 
 
@@ -34,6 +35,5 @@ package() {
   echo -en "#!/bin/bash\nexec /usr/share/$pkgname/MathMod $@"  >"$pkgdir/usr/bin/mathmod"
     chmod +x  "$pkgdir/usr/bin/mathmod"
 
-  rm -rf $pkgdir/usr/share/$pkgname/icon
 
 }
